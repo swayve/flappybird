@@ -1,12 +1,11 @@
 from ursina import *
-game = Ursina()
-
 
 def update():
-    print("Update!")                    # Print Update every time this loop is executed
-    if held_keys['t']:                  # If t is pressed
-        print(held_keys['t'])           # Print the value
+    cube.x -= 0.1
 
+game = Ursina()
+
+cube = Entity(model="cube", color=color.red, scale=(1,4), position= (5,4))
 
 
 
