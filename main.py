@@ -1,1 +1,1 @@
-print("ehllo world ")
+import ursina 
