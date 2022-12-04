@@ -10,4 +10,4 @@ cube = Entity(model="cube", color=color.green, scale=(1,4), position= (5,4))
 
 
 game.run()
-print("nigger")
+print(cube)
