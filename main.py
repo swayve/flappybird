@@ -20,11 +20,13 @@ class Test_Button(Button):
             texture = "brick",
             color = color.blue,
             scale = (1, 1),
-            position = (5, 0)
+            position = (5, 0),
+            highlight_color = color.red,
+            pressed_color = color.lime
+            
         )
     
     
-
 
 def update():
     if held_keys["w"]:
@@ -35,7 +37,7 @@ def update():
         cube.x -= 3.5 * time.dt 
     if held_keys["d"]:
         cube.x += 3.5 * time.dt 
-
+        
 #cube = Entity(model="quad", color=color.green, scale=(1,4), position= (5,0))
 #minecraft_cube = Entity(model="cube", texture='minecraft_blok.png.png', scale=(1,1), position = (1,1), rotation = Vec3(30, 30, 30))
 test_cube = Test_Button()
