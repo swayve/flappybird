@@ -2,13 +2,19 @@ from ursina import *
 game = Ursina()
 
 class Test_Cube(Entity):
-    def __init__(self,):
+    def __init__(self, Button):
         super().__init__(
+            parent = scene,
             model = "cube",
             color = color.white,
-            texture = "white_cube",
-            rotation = Vec3(30, 30, 30)
-        )
+            texture = "brick",
+            scale = (1, 1),
+            pressed_color = color.lime,
+            rotation = Vec3(0, 0, 0))
+
+                
+            
+        
 
 
 
@@ -22,10 +28,14 @@ class Test_Button(Button):
             scale = (1, 1),
             position = (5, 0),
             highlight_color = color.red,
-            pressed_color = color.lime
+            pressed_color = color.lime)
+    def input(self, key):
+        if self.hovered:
+            if key == "left mouse down":
+                print("BUtton pressed")
+            
     
             
-        )
     
     
 
@@ -42,4 +52,5 @@ def update():
 #cube = Entity(model="quad", color=color.green, scale=(1,4), position= (5,0))
 #minecraft_cube = Entity(model="cube", texture='minecraft_blok.png.png', scale=(1,1), position = (1,1), rotation = Vec3(30, 30, 30))
 test_cube = Test_Button()
+test_cube2 = Test_Cube()
 game.run()
