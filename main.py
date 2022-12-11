@@ -4,7 +4,8 @@ game = Ursina()
 class Test_Cube(Entity):
     def __init__(self, Button):
         super().__init__(
-            parent = scene,
+            parent = scene, 
+            #Well here there are some problems so yeah look at the super() func again and try to add the entity and Button in one and try to see wether its possible
             model = "cube",
             color = color.white,
             texture = "brick",
