@@ -1,7 +1,7 @@
 from ursina import *
 app = Ursina()
 window.title = "Flappy bird game"
-window.fullscreen = True
+window.fullscreen = False
 bg = Entity(model="quad",scale=(30, 15), texture="bg.png")
 
 class PipeUp(Entity):
@@ -22,7 +22,5 @@ class PipeDown(Entity):
 
 PipeUp(-5, 3)
 PipeDown(-5, -3)
-for pipe in range(5):
-    pass
-    
+
 app.run()
