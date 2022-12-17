@@ -38,9 +38,8 @@ def update():
     global offset, run, n_frame
     if run:
     #rolling bg
-        n_frame += 0.1
-        while n_frame > 10:
-            bird.x += 5 * time.dt
+        n_frame += 1
+        bird.x += 1 * time.dt
         offset += time.dt*.2
         setattr(bg, "texture_offset", (offset, 0))
         
