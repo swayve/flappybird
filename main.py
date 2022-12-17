@@ -3,12 +3,9 @@ from random import *
 app = Ursina()
 
 
-
-        
 offset = 0
 run = True
-num_pipes = 5
-x = 6
+n_frame = 0
 
 window.title = "Flappy bird game"
 bg = Entity(model="quad",scale=(30, 15), texture="bg.png")
@@ -26,21 +23,24 @@ class Pipe(Entity):
         self.x = x
         self.y = y 
         self.position = Vec2(x, y)
-      
-
-
+        
 def input(key):
+     
     if key == "w":
         bird.y +=  20 * time.dt
     
     if key == "s":
         bird.y -= 20 * time.dt
     
+    #Here we want to get the bird moving forward so we do that by the bird.x * frame.screen or some code like that so the bird goes forward by multiplying the frame time
     
 def update():
-    global offset, run
+    global offset, run, n_frame
     if run:
     #rolling bg
+        n_frame += 0.1
+        while n_frame > 10:
+            bird.x += 5 * time.dt
         offset += time.dt*.2
         setattr(bg, "texture_offset", (offset, 0))
         
