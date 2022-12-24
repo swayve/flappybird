@@ -1,4 +1,4 @@
-# flappybird
+# flappybird(Unfinished project)
 #This game is an unfinished project feel free to contribute !
 
 This game is a flappy bird game made with the python engine ursina 
