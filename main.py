@@ -9,7 +9,6 @@ num = 0
 x = 6
 
 window.title = "Flappy bird game"
-window.fullscreen = True
 bg = Entity(model="quad",scale=(30, 15), texture="bg.png")
 bird = Entity(model= "quad",texture="bird.png", scale=(2, 1), postition = (0, 0) )
 
@@ -28,9 +27,6 @@ class Pipe(Entity):
         self.collider = "box"
         
         
-def crash():
-    Text(text='Crashed! Reload the game!',origin=(0,0), scale=3,color=color.red)
-
 
 
 def input(key):
@@ -70,12 +66,7 @@ def update():
             pipe_up[m].x -= time.dt * 1.8
             pipe_down[m].x -= time.dt * 1.8
         
-        hit_info = bird.intersects()
-        if hit_info.hit:
-            run = False
-            invoke(Func(bird.shake, duration =2))
-            invoke(Func(bird.fade_out, duration =3))
-            invoke(crash, delay = 3)
+
         
 
 
