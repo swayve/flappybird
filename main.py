@@ -10,7 +10,7 @@ x = 6
 
 window.title = "Flappy bird game"
 bg = Entity(model="quad",scale=(30, 15), texture="bg.png")
-bird = Entity(model= "quad",texture="bird.png", scale=(2, 1), postition = (0, 0) )
+bird = Entity(model= "quad",texture="bird.png", scale=(2, 1), postition = (-4, 0) )
 
 
 
