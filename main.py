@@ -66,7 +66,7 @@ def update():
             pipe_up[m].x -= time.dt * 1.8
             pipe_down[m].x -= time.dt * 1.8
         
-
+ 
         
 
 
