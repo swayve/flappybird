@@ -32,7 +32,7 @@ class Pipe(Entity):
 def input(key):
      
     if key == "w":
-        bird.y +=  20 * time.dt
+        bird.y +=  20 * time.dt 
     
     if key == "s":
         bird.y -= 20 * time.dt
